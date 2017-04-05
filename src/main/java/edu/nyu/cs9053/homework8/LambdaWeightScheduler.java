@@ -24,6 +24,7 @@ public class LambdaWeightScheduler{
 		}
 	}
 
+	/*return the target schedule*/
 	public List<Job> getSchedule(){
 		return schedule;
 	}

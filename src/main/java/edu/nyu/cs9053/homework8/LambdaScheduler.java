@@ -15,14 +15,16 @@ public class LambdaScheduler{
 			sortByEndTime(jobs);
 			schedule.add(jobs.get(0));
 			for(i=1;i<jobs.size();i++){
-				if(jobs.get(i).getStartTime()<=schedule.get(schedule.size()-1).getEndTime()){
+				/*greedy*/
+				if(jobs.get(i).getStartTime()>=schedule.get(schedule.size()-1).getEndTime()){
 					schedule.add(jobs.get(i));
 				}
 			}
 		}
 		
 	}
-
+	
+	/*return the target schedule*/
 	public List<Job> getSchedule(){
 		return schedule;
 	}
